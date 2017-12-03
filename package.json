@@ -1,0 +1,19 @@
+{
+  "name": "least-slack-scheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stierma1/least-slack-scheduler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stierma1/least-slack-scheduler/issues"
+  },
+  "homepage": "https://github.com/stierma1/least-slack-scheduler#readme"
+}
