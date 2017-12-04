@@ -6,8 +6,8 @@ var helloLogger = () => {
   console.log("Hello World");
 }
 
-var goodbyeDelegate = () => {
-  console.log("Goodbye");
+var goodbyeDelegate = (moreString) => {
+  console.log("Goodbye " + moreString);
 }
 
 var helloLoggerTask  = new Periodic({releaseTime:1000, executionTime:1, period: 2000, delegate:helloLogger});
@@ -17,4 +17,4 @@ var leastScheduler = new LeastSlackScheduler();
 leastScheduler.addTask("helloLogger", helloLoggerTask);
 leastScheduler.addTask("goodbye", goodbyeTask);
 
-leastScheduler.releaseJob("goodbye");
+leastScheduler.releaseJob("goodbye", "world");
