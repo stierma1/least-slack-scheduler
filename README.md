@@ -31,13 +31,13 @@ SoftJobs have deadlines that are allowed to be missed therefore the scheduler wi
 HardJobs have deadlines that are not allowed to be missed therefore the scheduler will treat these as high priority.
 
 ### Slack
-Slack is the amount between job completion and deadline of the same job.  Generally it is computed as
+Slack is the amount of time between job completion and deadline of the same job.  Generally it is computed as
 ```js
 var slack = deadline - currentTime - estimatedComputationTime;
 ```
 Slack can be negative meaning the deadline will be missed.
 
-### LeastLackFirstScheduling
+### LeastSlackFirstScheduling
 
 LeastSlackScheduling will run the jobs with the least amount of slack first.  Note all hard jobs will be prioritized over all soft jobs.  Therefore soft jobs will not be run until the hard job queue is empty.
 
@@ -58,6 +58,7 @@ var goodbyeDelegate = () => {
 
 var helloLoggerTask  = new Periodic({releaseTime:1000, executionTime:1, period: 2000, delegate:helloLogger});
 var goodbyeTask = new Sporadic({executionTime:1, deadlineTime: 2000, delegate:goodbyeDelegate});
+
 var leastScheduler = new LeastSlackScheduler({maxConcurrent:2});
 
 leastScheduler.addTask("helloLogger", helloLoggerTask);
