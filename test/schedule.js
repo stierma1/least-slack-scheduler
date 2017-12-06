@@ -21,8 +21,6 @@ leastScheduler.addTask("goodbye", goodbyeTask);
 
 leastScheduler.releaseJob("goodbye", "world");
 
-var goodbyeTask = new Sporadic({executionTime:1, deadlineTime: 2000, delegate:goodbyeDelegate});
-
 var timeTask = new Aperiodic({executionTime:1, deadlineTime: 2000, delegate:() => {
   return Date.now();
 }});
