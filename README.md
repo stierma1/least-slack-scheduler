@@ -67,3 +67,16 @@ leastScheduler.addTask("goodbye", goodbyeTask);
 leastScheduler.releaseJob("goodbye");
 
 ```
+
+## API
+
+###LeastSlackScheduler
+
+####Constructor({maxConcurrent: (Int)})
+Constructs a new LeastSlackScheduler object will run a jobs at max concurrency.
+
+####addTask(String taskName, Task task)
+Adds a task to the scheduler bound to the given name.
+
+####releaseJob(String taskName, (optional) Object parameters)
+Spawns a job from a given taskName, the optional params will be past into the jobs/tasks delegate function when it invokes.  Task must be registered using addTask before this function will work.
