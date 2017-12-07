@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/stierma1/least-slack-scheduler/issues"
   },
-  "homepage": "https://github.com/stierma1/least-slack-scheduler#readme"
+  "homepage": "https://github.com/stierma1/least-slack-scheduler#readme",
+  "dependencies": {
+    "qheap": "^1.4.0"
+  }
 }
