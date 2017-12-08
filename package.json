@@ -1,6 +1,6 @@
 {
   "name": "least-slack-scheduler",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/stierma1/least-slack-scheduler#readme",
   "dependencies": {
-    "qheap": "^1.4.0"
+    "qheap": "^1.4.0",
+    "uuid": "^3.1.0"
   }
 }
