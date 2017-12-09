@@ -32,7 +32,5 @@ var logItTask = new Aperiodic({executionTime:1, deadlineTime: 2000, delegate:(pa
 var logTimeTask = Utils.taskCompose(timeTask, logItTask);
 leastScheduler.addTask("logTime", logTimeTask);
 leastScheduler.releaseJob("logTime");
-leastScheduler.releaseJob("logTime");
-leastScheduler.releaseJob("logTime");
-leastScheduler.releaseJob("logTime");
-leastScheduler.releaseJob("logTime");
+
+leastScheduler.removeTask("helloLogger");
